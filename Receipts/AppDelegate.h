@@ -19,6 +19,9 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (NSManagedObject *)createEntityForName:(NSString *)name info:(NSDictionary *)info;
+- (NSArray *)fetchEntityForName:(NSString *)name;
+
 
 
 @end

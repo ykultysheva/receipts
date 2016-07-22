@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "MasterViewController.h"
+#import "Receipt.h"
+#import "Tag.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +26,29 @@
     MasterViewController *controller = (MasterViewController *)masterNavigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
+    
+    
+    
+//# pragma mark - CREATE
+//    
+//    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Receipt"
+//                                                         inManagedObjectContext:self.managedObjectContext];
+//    Receipt *newReceipt = [[Receipt alloc] initWithEntity:entityDescription
+//                        insertIntoManagedObjectContext:self.managedObjectContext];
+//    newReceipt.amount = @"24";
+//    entityDescription = [NSEntityDescription entityForName:@"Tag"
+//                                    inManagedObjectContext:self.managedObjectContext];
+//    Tag *tag = [[Tag alloc] initWithEntity:entityDescription
+//                        insertIntoManagedObjectContext:self.managedObjectContext];
+//    [newReceipt addTagsObject:tag];
+//    NSError *error = nil;
+//    if (![newReceipt.managedObjectContext save:&error]) {
+//        NSLog(@"Unable to save managed object context.");
+//        NSLog(@"%@, %@", error, error.localizedDescription);
+//    }
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -49,6 +73,57 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+
+
+- (NSManagedObject *)createEntityForName:(NSString *)name info:(NSDictionary *)info {
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:name
+                                                         inManagedObjectContext:self.managedObjectContext];
+    NSManagedObject *mObj = [[NSManagedObject alloc] initWithEntity:entityDescription
+                                     insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    [info enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [mObj setValue:obj forKey:key];
+    }];
+    return mObj;
+}
+
+//#pragma mark - READ
+
+-(NSArray *)fetchEntityForName:(NSString *)name {
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+
+    NSEntityDescription *entity = [NSEntityDescription entityForName:name inManagedObjectContext:self.managedObjectContext];
+    
+    [fetchRequest setEntity:entity];
+
+    NSError *error;
+    
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+
+    if (result.count > 0) {
+        return result;
+//        NSManagedObject *object = (NSManagedObject *)[result objectAtIndex:0];
+//        NSLog(@"1 - %@", name);
+//    
+//        NSLog(@"%@ %@", [object valueForKey:@"title"], [name valueForKey:@"note"]);
+//    
+//        NSLog(@"2 - %@", object);
+    }
+    return result;
+}
+
+
+
+
+
+
 
 #pragma mark - Core Data stack
 

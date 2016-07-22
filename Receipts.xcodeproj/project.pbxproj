@@ -15,6 +15,12 @@
 		976737191D41222200158C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976737171D41222200158C06 /* Main.storyboard */; };
 		9767371B1D41222200158C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9767371A1D41222200158C06 /* Assets.xcassets */; };
 		9767371E1D41222200158C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9767371C1D41222200158C06 /* LaunchScreen.storyboard */; };
+		9767372D1D41239100158C06 /* Receipt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 976737261D41239100158C06 /* Receipt+CoreDataProperties.m */; };
+		9767372E1D41239100158C06 /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 976737281D41239100158C06 /* Receipt.m */; };
+		9767372F1D41239100158C06 /* Tag+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9767372A1D41239100158C06 /* Tag+CoreDataProperties.m */; };
+		976737301D41239100158C06 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9767372C1D41239100158C06 /* Tag.m */; };
+		976737331D41447000158C06 /* DetailedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 976737321D41447000158C06 /* DetailedCell.m */; };
+		9767375C1D42A3B500158C06 /* MasterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9767375B1D42A3B500158C06 /* MasterViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,18 @@
 		9767371A1D41222200158C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9767371D1D41222200158C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9767371F1D41222200158C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		976737251D41239100158C06 /* Receipt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Receipt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		976737261D41239100158C06 /* Receipt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Receipt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		976737271D41239100158C06 /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
+		976737281D41239100158C06 /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receipt.m; sourceTree = "<group>"; };
+		976737291D41239100158C06 /* Tag+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tag+CoreDataProperties.h"; sourceTree = "<group>"; };
+		9767372A1D41239100158C06 /* Tag+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tag+CoreDataProperties.m"; sourceTree = "<group>"; };
+		9767372B1D41239100158C06 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		9767372C1D41239100158C06 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		976737311D41447000158C06 /* DetailedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedCell.h; sourceTree = "<group>"; };
+		976737321D41447000158C06 /* DetailedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedCell.m; sourceTree = "<group>"; };
+		9767375A1D42A3B500158C06 /* MasterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewCell.h; sourceTree = "<group>"; };
+		9767375B1D42A3B500158C06 /* MasterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,14 @@
 		976736FC1D41222200158C06 = {
 			isa = PBXGroup;
 			children = (
+				976737251D41239100158C06 /* Receipt+CoreDataProperties.h */,
+				976737261D41239100158C06 /* Receipt+CoreDataProperties.m */,
+				976737271D41239100158C06 /* Receipt.h */,
+				976737281D41239100158C06 /* Receipt.m */,
+				976737291D41239100158C06 /* Tag+CoreDataProperties.h */,
+				9767372A1D41239100158C06 /* Tag+CoreDataProperties.m */,
+				9767372B1D41239100158C06 /* Tag.h */,
+				9767372C1D41239100158C06 /* Tag.m */,
 				976737071D41222200158C06 /* Receipts */,
 				976737061D41222200158C06 /* Products */,
 			);
@@ -67,9 +93,13 @@
 				9767370C1D41222200158C06 /* AppDelegate.m */,
 				976737111D41222200158C06 /* MasterViewController.h */,
 				976737121D41222200158C06 /* MasterViewController.m */,
+				9767375A1D42A3B500158C06 /* MasterViewCell.h */,
+				9767375B1D42A3B500158C06 /* MasterViewCell.m */,
 				976737141D41222200158C06 /* DetailViewController.h */,
 				976737151D41222200158C06 /* DetailViewController.m */,
 				976737171D41222200158C06 /* Main.storyboard */,
+				976737311D41447000158C06 /* DetailedCell.h */,
+				976737321D41447000158C06 /* DetailedCell.m */,
 				9767371A1D41222200158C06 /* Assets.xcassets */,
 				9767371C1D41222200158C06 /* LaunchScreen.storyboard */,
 				9767371F1D41222200158C06 /* Info.plist */,
@@ -157,11 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976737301D41239100158C06 /* Tag.m in Sources */,
+				9767372D1D41239100158C06 /* Receipt+CoreDataProperties.m in Sources */,
 				976737161D41222200158C06 /* DetailViewController.m in Sources */,
+				9767372F1D41239100158C06 /* Tag+CoreDataProperties.m in Sources */,
 				976737131D41222200158C06 /* MasterViewController.m in Sources */,
 				976737101D41222200158C06 /* Receipts.xcdatamodeld in Sources */,
 				9767370D1D41222200158C06 /* AppDelegate.m in Sources */,
+				9767375C1D42A3B500158C06 /* MasterViewCell.m in Sources */,
+				9767372E1D41239100158C06 /* Receipt.m in Sources */,
 				9767370A1D41222200158C06 /* main.m in Sources */,
+				976737331D41447000158C06 /* DetailedCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +346,7 @@
 				976737241D41222200158C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
